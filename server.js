@@ -11,6 +11,7 @@ var help = [
     "  --port      PORT    Port that the proxy server should run on",
     "  --redisport PORT    Port for redis server",
     "  --redishost HOST    Host for redis server",
+    "  --redispass PASS    Password for redis server",
     "  --silent            Silence the log output",
     "  -h, --help          You're staring at it"
 ].join('\n');
@@ -20,4 +21,4 @@ if (argv.h || argv.help) {
 }
 
 Juggernaut = require("./index");
-Juggernaut.listen(argv.port, argv.redisport, argv.redishost);
+Juggernaut.listen(argv.port, argv.redisport, argv.redishost, argv.redispass);
